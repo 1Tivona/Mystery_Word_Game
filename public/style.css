@@ -1,0 +1,14 @@
+.gameBoard {
+  background-color: pink;
+  width: 300px;
+  border: 15px solid black;
+}
+
+h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  width: 0;
+
+}

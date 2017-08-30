@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title> Guess the Word!</title>
+  <link rel='stylesheet' type='text/css' href="/public/style.css">
+</head>
+<body id = 'container'>
+  <div class= 'gameBoard'>
+  <h1>What's the Word?</h1>
+
+  <h6>Choose letters one at a time to reveal the word.</h6>
+
+  <p>You have 8 guesses to complete the game</p>
+
+    <div class= 'guessedWord'>
+    {{#gameLetters}}
+      <h2>{{.}}</h2>
+    {{/gameLetters}}
+    {{#showLetter}}
+      {{.}}
+    {{/showLetter}}
+    </div>
+
+  </div>
+  <form action = '/game' method = 'post'>
+    <input type = 'text' name = 'guess' placeholder = 'Guess a Letter' maxlength='4'>
+    <button type = 'submit' >Submit</button>
+  </form>
+
+</body>
+</html>
